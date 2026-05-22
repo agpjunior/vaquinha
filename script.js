@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Simulação de valor já arrecadado (pode ser ajustado)
-  let amountRaised = 0;
+  let amountRaised = 2.256,25;
 
   const examsListContainer = document.getElementById("exams-list");
   const amountRaisedEl = document.getElementById("amount-raised");
