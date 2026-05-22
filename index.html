@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajude nos Custos dos Exames Médicos</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Font Awesome para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header animate-fade-in">
+      <div class="container">
+        <h1>Ajude nos Custos dos Exames Médicos</h1>
+        <p class="subtitle">
+          Estou arrecadando valores para realização de exames médicos
+          essenciais.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Seção de Progresso -->
+      <section class="progress-section animate-slide-up">
+        <div class="progress-info">
+          <div class="progress-item">
+            <span class="label">Arrecadado</span>
+            <span class="value" id="amount-raised">R$ 0,00</span>
+          </div>
+          <div class="progress-item">
+            <span class="label">Meta</span>
+            <span class="value" id="total-goal">R$ 0,00</span>
+          </div>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="progress-percentage" id="progress-percentage">
+          0% atingido
+        </div>
+        <p class="remaining-text">
+          A atualização do valor arrecadado será realizada a cada 12 horas.
+        </p>
+      </section>
+
+      <!-- Seção de Exames -->
+      <section class="exams-section animate-slide-up">
+        <h2 class="section-title">
+          <i class="fas fa-notes-medical"></i> Lista de Exames
+        </h2>
+        <div class="exams-grid" id="exams-list">
+          <!-- Os cards serão inseridos via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Seção de Doação -->
+      <section class="donation-section animate-slide-up">
+        <div class="donation-card">
+          <h2 class="section-title">
+            <i class="fas fa-hand-holding-heart"></i> Como Contribuir
+          </h2>
+          <p class="highlight-text">Toda ajuda faz diferença ❤️</p>
+
+          <div class="pix-container">
+            <div class="qr-code-wrapper">
+              <img
+                src="qrcode.png"
+                alt="QR Code PIX"
+                class="qr-code"
+                id="pix-qr"
+              />
+            </div>
+            <p class="qr-instruction">Escaneie o QR Code para contribuir</p>
+
+            <div class="pix-details">
+              <div class="pix-key-box">
+                <span class="pix-label">Chave PIX:</span>
+                <span class="pix-key" id="pix-key-value"
+                  >agpjunior04@gmail.com</span
+                >
+                <button id="copy-pix" class="btn-copy" title="Copiar chave PIX">
+                  <i class="far fa-copy"></i> Copiar
+                </button>
+              </div>
+              <div class="pix-beneficiary">
+                <span class="pix-label">Beneficiário:</span>
+                <span class="pix-name">Amaury Gomes Pereira Junior</span>
+              </div>
+            </div>
+            <div id="copy-message" class="copy-message">
+              Chave copiada com sucesso!
+            </div>
+          </div>
+
+          <!-- <button class="btn-contribute" id="btn-contribute-main">
+            <i class="fas fa-heart"></i> Contribuir Agora
+          </button> -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Agradecemos de coração por qualquer ajuda e por compartilhar esta
+          causa.
+        </p>
+        <p class="footer-small">
+          &copy; 2024 Campanha de Arrecadação para Exames Médicos
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
