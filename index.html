@@ -1,124 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ajude nos Custos dos Exames Médicos</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!-- Font Awesome para ícones -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header animate-fade-in">
-      <div class="container">
-        <h1>Ajude nos Custos dos Exames Médicos</h1>
-        <p class="subtitle">
-          Estou arrecadando valores para realização de exames médicos do
-          concurso em que estou realizado.
-        </p>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! - Campanha de Exames Médicos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Base e Específico Integrados */
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #3498db;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100% );
+            --text-color: #2c3e50;
+            --light-text: #7f8c8d;
+            --white: #ffffff;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            --border-radius: 15px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-gradient); color: var(--text-color); line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        .header-thanks { padding: 80px 0 60px; text-align: center; position: relative; }
+        .celebration-icon { font-size: 4rem; color: #e74c3c; margin-bottom: 20px; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+        .thank-you-card { background: var(--white); padding: 50px 40px; border-radius: var(--border-radius); box-shadow: var(--card-shadow); text-align: center; margin-bottom: 40px; }
+        .message-icon { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 20px; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .stat-card { background: var(--white); padding: 30px; border-radius: var(--border-radius); box-shadow: var(--card-shadow); text-align: center; }
+        .stat-number { display: block; font-size: 1.8rem; font-weight: 700; color: var(--primary-color); }
+
+        .steps-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .step-card { background: var(--white); padding: 25px; border-radius: var(--border-radius); box-shadow: var(--card-shadow); text-align: center; }
+        .step-number { width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; }
+
+        .btn-back { display: inline-block; padding: 15px 40px; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 30px; font-weight: 600; transition: var(--transition); margin-top: 20px; }
+        .btn-back:hover { background: #2980b9; transform: translateY(-2px); }
+
+        .footer { padding: 40px 0; text-align: center; color: var(--light-text); font-size: 0.9rem; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .animate-fade-in { animation: fadeIn 1s ease-out; }
+    </style>
+</head>
+<body>
+    <header class="header-thanks animate-fade-in">
+        <div class="container">
+            <div class="celebration-icon"><i class="fas fa-heart"></i></div>
+            <h1>Muito Obrigado!</h1>
+            <p>Sua generosidade faz toda a diferença</p>
+        </div>
     </header>
 
     <main class="container">
-      <!-- Seção de Progresso -->
-      <section class="progress-section animate-slide-up">
-        <div class="progress-info">
-          <div class="progress-item">
-            <span class="label">Arrecadado</span>
-            <span class="value" id="amount-raised">R$ 0,00</span>
-          </div>
-          <div class="progress-item">
-            <span class="label">Meta</span>
-            <span class="value" id="total-goal">R$ 0,00</span>
-          </div>
-        </div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        <div class="progress-percentage" id="progress-percentage">
-          0% atingido
-        </div>
-        <p class="remaining-text">
-          A atualização do valor arrecadado será realizada a cada 12 horas.
-        </p>
-      </section>
+        <section class="thank-you-card">
+            <div class="message-icon"><i class="fas fa-hands-praying"></i></div>
+            <h2>Agradecemos Sinceramente</h2>
+            <p>Sua contribuição foi essencial para nos ajudar a custear os exames médicos necessários. Cada gesto de solidariedade representa uma esperança renovada.</p>
+        </section>
 
-      <!-- Seção de Exames -->
-      <section class="exams-section animate-slide-up">
-        <h2 class="section-title">
-          <i class="fas fa-notes-medical"></i> Lista de Exames
-        </h2>
-        <div class="exams-grid" id="exams-list">
-          <!-- Os cards serão inseridos via JavaScript -->
-        </div>
-      </section>
-
-      <!-- Seção de Doação -->
-      <section class="donation-section animate-slide-up">
-        <div class="donation-card">
-          <h2 class="section-title">
-            <i class="fas fa-hand-holding-heart"></i> Como Contribuir
-          </h2>
-          <p class="highlight-text">Toda ajuda faz diferença ❤️</p>
-
-          <div class="pix-container">
-            <div class="qr-code-wrapper">
-              <img
-                src="qrcode.png"
-                alt="QR Code PIX"
-                class="qr-code"
-                id="pix-qr"
-              />
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">42</span>
+                <span>Doadores</span>
             </div>
-            <p class="qr-instruction">Escaneie o QR Code para contribuir</p>
-
-            <div class="pix-details">
-              <div class="pix-key-box">
-                <span class="pix-label">Chave PIX:</span>
-                <span class="pix-key" id="pix-key-value"
-                  >agpjunior04@gmail.com</span
-                >
-                <button id="copy-pix" class="btn-copy" title="Copiar chave PIX">
-                  <i class="far fa-copy"></i> Copiar
-                </button>
-              </div>
-              <div class="pix-beneficiary">
-                <span class="pix-label">Beneficiário:</span>
-                <span class="pix-name">Amaury Gomes Pereira Junior</span>
-              </div>
+            <div class="stat-card">
+                <span class="stat-number">R$ 3.515</span>
+                <span>Arrecadado</span>
             </div>
-            <div id="copy-message" class="copy-message">
-              Chave copiada com sucesso!
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span>Da Meta</span>
             </div>
-          </div>
-
-          <!-- <button class="btn-contribute" id="btn-contribute-main">
-            <i class="fas fa-heart"></i> Contribuir Agora
-          </button> -->
         </div>
-      </section>
+
+        <h2 style="text-align: center; margin-bottom: 25px;">Próximos Passos</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Agendamento</h3>
+                <p>Marcação dos exames nos próximos dias.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Realização</h3>
+                <p>Ida às clínicas para os procedimentos.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Resultados</h3>
+                <p>Acompanhamento médico dos laudos.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 60px;">
+            <a href="index.html" class="btn-back">Voltar para a Campanha</a>
+        </div>
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <p>
-          Agradecemos de coração por qualquer ajuda e por compartilhar esta
-          causa.
-        </p>
-        <p class="footer-small">
-          &copy; 2024 Campanha de Arrecadação para Exames Médicos
-        </p>
-      </div>
+        <p>&copy; 2024 Campanha de Arrecadação para Exames Médicos</p>
     </footer>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
